@@ -1,0 +1,252 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: rgb(177, 177, 177);
+    --primary-color: #EE4D2D;
+}
+*{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+html{   
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+#main{
+    width: 375px;
+    height:100%;
+    min-height: 667px;
+    /* background-color: #999; */
+    background: linear-gradient(0,rgb(7, 7, 7),#032c1b);
+    padding: 20px 20px 0px 20px;
+}
+.dashbroad{
+    position: fixed;
+    width: 100%;
+    min-height: 240px;
+    top: 0;
+    left: 0;
+    padding: 20px 20px 10px 20px
+}
+/* header */
+.header{
+    display: flex;
+    justify-content: space-between
+}
+.album-name,
+.minimize-btn,
+.option-btn{
+    color: var(--white-color);
+    padding: 10px;
+    font-weight: 500;
+}
+.album-name h4{
+    color: var(--text-color);
+    text-align: center;
+    padding: 2px 0;
+}
+.album-name p{
+    font-size: 15px;
+    text-align: center;
+}
+.minimize-btn:hover ,
+.option-btn:hover{
+    color: var(--text-color);
+}
+
+/* CD */
+.cd{
+    display:flex;
+    margin: auto;
+    width: 180px;
+}
+.cd-thumb{
+    width: 100%;
+    padding-top: 100%;
+    border-style: none;
+    border-radius: 50%;
+    /* border: 2px solid black; */
+    margin: auto;
+    background-size: cover;
+}
+.cd-info p{
+    color: var(--text-color);
+}
+
+/* Control */
+.control{
+    display:flex;
+    flex-direction: column;
+}
+
+.normal-control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.advanced-control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    display: block;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+}
+.main-btn{
+    font-size: 22px;
+    padding: 15px 18.032px;
+}
+.btn-toggle-play{
+    border-radius: 50%;
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+.control .btn.active{
+    color: #1db954;
+}
+.main-btn:active{
+    color: var(--text-color);
+}
+#main.playing .pause-btn,
+#main:not(.playing) .play-btn{  
+    display: block;
+}
+#main.playing .play-btn,
+#main:not(.playing) .pause-btn{
+    display: none;
+}
+/* input progress */
+#progress{
+    width: 100%;
+    height: 5px;
+}
+.info-progress{
+    display: flex;
+    justify-content: space-between;
+}
+.info-progress p{
+    color: var(--text-color);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+
+/* Playlist */
+.playlist{
+    margin-top: 400px;
+}
+.song{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 8px 10px;
+    background-color: #111411;
+    border-radius: 6px;
+}
+.song .thumb{
+    width: 40px;
+    background-image: url(./assests/img/pic2.jpg);
+    height: 40px;
+    background-size: cover;
+    border-radius: 4px;
+}
+.song .body{
+    flex: 1;
+    margin-left: 20px;
+    position: relative;
+}
+.body .title{
+    color: var(--text-color);
+    font-size: 15px;
+}
+.body .author{
+    color: var(--text-color);
+    font-size: 12px;
+}
+.song .option{
+    color: var(--text-color);
+    font-size: 12px;
+    padding: 10px;
+}
+.song.active .title{
+    color: var(--white-color);
+}
+.song.active .author{
+    color: var(--white-color);
+}
+.song.active .option{
+    color: var(--white-color);
+}
+.song.active{
+    background-color: #B84BFF;
+}
+.song:active{
+    opacity: 0.8;
+}
+/* Icon listening */
+.icon-listening{
+    display: flex;
+    position: absolute;
+    top: 13px;
+    left: -16.5px;
+}
+
+.icon-listening-line1{
+    height: 2px;
+    width: 2px;
+    background-color: green;
+    margin-left: 2px;
+    
+}
+
+.icon-listening-line2{
+    height: 2px;
+    width: 2px;
+    background-color: green;
+    margin-left: 2px; 
+}
+
+.icon-listening-line3{
+    height: 2px;
+    width: 2px;
+    background-color: green;
+    margin-left: 2px;
+    
+}
+.icon-listening-line1.active{
+    animation: growUpgrowDown 0.6s linear infinite;
+    animation-direction: alternate-reverse;
+}
+.icon-listening-line2.active{
+    animation: growUpgrowDown 0.5s linear infinite;
+    animation-direction: alternate-reverse;
+}
+.icon-listening-line3.active{
+    animation: growUpgrowDown 0.7s linear infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes growUpgrowDown {
+    from{
+      transform: translateY(0);
+      height: 0px;
+    }
+    to{
+      transform: translateY(-10px);
+      height: 10px;
+    }
+}
+/* Heart Icon */
+.btn-heart.active{
+    color: rgb(47, 255, 75);
+}
+.btn-remove:active{
+    color: red;
+}
