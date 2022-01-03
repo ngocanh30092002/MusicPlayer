@@ -416,21 +416,21 @@
                     nextBtn.click();
                 }
             },
-            loadHeartIcon: function(){
-                var isHaveIcon = false;
-                for(var i = 0 ; i < this.iconHeart.length ; i++){
-                    if(this.iconHeart[i] === this.currentIndex)
-                        isHaveIcon = true;
-                }
-                if(!isHaveIcon){
-                    heartBtn.innerHTML = '<i class="far fa-heart"></i>';
-                    heartBtn.classList.remove('active');
-                }
-                else{
-                    heartBtn.innerHTML = '<i class="fas fa-heart"></i>';
-                    heartBtn.classList.add('active');
-                }
-            },
+            // loadHeartIcon: function(){
+            //     var isHaveIcon = false;
+            //     for(var i = 0 ; i < this.iconHeart.length ; i++){
+            //         if(this.iconHeart[i] === this.currentIndex)
+            //             isHaveIcon = true;
+            //     }
+            //     if(!isHaveIcon){
+            //         heartBtn.innerHTML = '<i class="far fa-heart"></i>';
+            //         heartBtn.classList.remove('active');
+            //     }
+            //     else{
+            //         heartBtn.innerHTML = '<i class="fas fa-heart"></i>';
+            //         heartBtn.classList.add('active');
+            //     }
+            // },
             loadIconListenings: function() {
                 const listIconListenings = $$('.icon-listening');
                 let childElementCount = listIconListenings[this.currentIndex].childElementCount;
