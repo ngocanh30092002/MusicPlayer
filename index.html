@@ -420,6 +420,7 @@
                 var isHaveIcon = false;
                 if(this.iconHeart.indexOf(this.currentIndex) != -1){
                     isHaveIcon = true;
+                    console.log(Array.isArray(this.iconHeart));
                 }
                 if(!isHaveIcon){
                     heartBtn.innerHTML = '<i class="far fa-heart"></i>';
