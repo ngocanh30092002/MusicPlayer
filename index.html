@@ -418,7 +418,7 @@
             },
             loadHeartIcon: function(){
                 var isHaveIcon = false;
-                for(var icon of this.iconHeart){
+                for(var i = 0 ; i < this.iconHeart.length ; i++){
                     if(icon === this.currentIndex) isHaveIcon = true;
                 }
                 if(!isHaveIcon){
