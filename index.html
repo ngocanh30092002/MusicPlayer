@@ -404,7 +404,7 @@
                         _this.handleElementOfHeartIcon(_this.currentIndex);
                     }
                     heartBtn.classList.toggle('active');
-                    _this.setConfig("iconHeart",_this.iconHeart);
+                    // _this.setConfig("iconHeart",_this.iconHeart);
                 }
                 
                 // Xử lý khi click vào nút remove Song
@@ -420,7 +420,6 @@
                 var isHaveIcon = false;
                 if(this.iconHeart.indexOf(this.currentIndex) != -1){
                     isHaveIcon = true;
-                    console.log(Array.isArray(this.iconHeart));
                 }
                 if(!isHaveIcon){
                     heartBtn.innerHTML = '<i class="far fa-heart"></i>';
@@ -475,7 +474,6 @@
             loadConfig: function(){
                 this.isRandom = this.config.isRandom;
                 this.isRepeat = this.config.isRepeat;
-                this.iconHeart = this.config.iconHeart;
                 randomBtn.classList.toggle("active",this.isRandom);
                 repeatBtn.classList.toggle("active",this.isRepeat);
             }
