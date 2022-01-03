@@ -419,7 +419,7 @@
             loadHeartIcon: function(){
                 var isHaveIcon = false;
                 for(var i = 0 ; i < this.iconHeart.length ; i++){
-                    if(icon === this.currentIndex) isHaveIcon = true;
+                    if(this.iconHeart[i] === this.currentIndex) isHaveIcon = true;
                 }
                 if(!isHaveIcon){
                     heartBtn.innerHTML = '<i class="far fa-heart"></i>';
